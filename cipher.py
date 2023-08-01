@@ -4,14 +4,17 @@ alphabet = (("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 
 # Get sentence string and shift value from user.
 sentence_to_encrypt = input("Please enter a message to encrypt: ")
-encryption_offset = int(input("Please enter the character shift amount for encryption: "))
+encryption_offset = input("Please enter the character shift amount for encryption: ")
+
+if str.isdigit(encryption_offset) == False:
+    print("Integer value required. Please try again.")
+    exit()
 
 # Get character location in tuple. Shift that value by user input amount. Replace letter with new letter via
 # alphabet index location.
 
 # Split sentence into list containing individual words.
 words_to_encrypt = sentence_to_encrypt.split()
-
 encrypted_sentence = []
 
 for word in words_to_encrypt:
@@ -32,7 +35,7 @@ for word in words_to_encrypt:
                 # Geet location of input character in alphabet tuple.
                 new_letter_location = alphabet[case].index(letter_location)
                 # Shifts tuple location by user determined amount for cipher.
-                new_letter_location += encryption_offset
+                new_letter_location += int(encryption_offset)
                 # Loops end-of-alphabet characters to beginning if needed.
                 if new_letter_location > 25:
                     new_letter_location -= 26
