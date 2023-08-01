@@ -1,4 +1,4 @@
-# Alphabet list, to compare values and index locations.
+# Alphabet tuple, to compare values and index locations.
 alphabet = (("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"),
             ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"))
 
@@ -6,7 +6,7 @@ alphabet = (("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 sentence_to_encrypt = input("Please enter a message to encrypt: ")
 encryption_offset = int(input("Please enter the character shift amount for encryption: "))
 
-# Get character location in list. Shift that value by user input amount. Replace letter with new letter via
+# Get character location in tuple. Shift that value by user input amount. Replace letter with new letter via
 # alphabet index location.
 
 # Split sentence into list containing individual words.
@@ -42,9 +42,9 @@ for word in words_to_encrypt:
             # Preserves non-alphabet characters.
             elif letter_location == "z" and letter_encrypted == False:
                 new_letter = letter
-        # Builds new encrypted words from the replaced letters.
+        # Builds new encrypted word from the replaced letters.
         encrypted_word.append(new_letter)
-    # Builds new encrypted sentences from the encrypted words.
+    # Builds new encrypted sentence using the encrypted words.
     encrypted_sentence.append(encrypted_word)
 
 #Loop through new sentence list. First through letters, adding each to new print sentence. Next through words,
