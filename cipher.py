@@ -50,14 +50,14 @@ for word in words_to_encrypt:
     # Builds new encrypted sentence using the encrypted words.
     encrypted_sentence.append(encrypted_word)
 
-#Loop through new sentence list. First through letters, adding each to new print sentence. Next through words,
+# Loop through new sentence list. First through letters, adding each to new print sentence. Next through words,
 # adding space at end of words.
 print_sentence = ""
 for word in encrypted_sentence:
     for letter in word:
         print_sentence += str(letter)
     print_sentence += str(" ")
-print("Your encrypted message: " + print_sentence)
+print("The encrypted sentence is: " + print_sentence)
 
 
 
