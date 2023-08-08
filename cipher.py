@@ -4,14 +4,12 @@ alphabet = (("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 
 # Get sentence string and shift value from user.
 sentence_to_encrypt = input("Please enter a message to encrypt: ")
-encryption_offset = input("Please enter the character shift amount for encryption: ")
+# encryption_offset = input("Please enter the character shift amount for encryption: ")
 
-if str.isdigit(encryption_offset) == False:
-    print("Integer value required. Please try again.")
-    exit()
-
-# Get character location in tuple. Shift that value by user input amount. Replace letter with new letter via
-# alphabet index location.
+encryption_offset = 5
+# if str.isdigit(encryption_offset) == False:
+#     print("Integer value required. Please try again.")
+#     exit()
 
 # Split sentence into list containing individual words.
 words_to_encrypt = sentence_to_encrypt.split()
